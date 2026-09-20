@@ -97,31 +97,8 @@ You should see a **1920×1080** window with a menu listing the 3 presets.
 
 ---
 
-## What's different from the original version
 
-- **Default resolution is 1920×1080** (was 800×600). All 3 seed presets are
-  positioned and sized to fill this canvas. Change `WINDOW_WIDTH` /
-  `WINDOW_HEIGHT` in `config.py` if you want a different size — but remember
-  the floor/walls and object positions in `seed.sql` are hardcoded for
-  1920×1080, so resizing again means updating those values too (see below).
-- **Physics substeps** (`PHYSICS_SUBSTEPS` in `config.py`, default `4`) — the
-  engine now runs multiple smaller physics updates per rendered frame for
-  more accurate, stable collisions, especially with fast-moving objects.
-  Raise it for more accuracy, lower it (minimum `1`) for more speed on
-  slower machines.
-- **Anti-aliased circles** — circles now render with smooth edges via
-  `pygame.gfxdraw` instead of hard-edged pixels.
-- **Windows DPI fix** — `main.py` now calls `SetProcessDPIAware()` on
-  Windows before creating the window, so display scaling (125%/150%, common
-  on laptops) doesn't crop or shrink the window.
-- **Circle-vs-rect collision bug fixed** — circles now rest fully above a
-  floor/wall surface instead of sinking halfway into it.
-- **Credentials split out** — your MySQL password lives in
-  `db_credentials.py`, never in `config.py`.
-
----
-
-## Changing the Window Size Again
+## Changing the Window Size
 
 If you want a different resolution than 1920×1080:
 
