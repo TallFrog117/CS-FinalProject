@@ -47,3 +47,11 @@ Hardware specifications:
 		Network      None (MySQL runs locally)
 
 Members of the team: Anirudh, Abhimanyu
+
+
+
+
+
+
+Go to: https://docs.google.com/document/d/1iEa_WZRIEfzRxlZdo6DI1n1jRxGfkNRyp9Bije1w4Zg/edit?usp=sharing
+/\ for adding new presets/scenarios to simulate
